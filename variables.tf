@@ -39,3 +39,9 @@ variable "az_ssh_pubkey" {
   description = "Public key for SSH access"
   default     = ""
 }
+
+variable "department" {
+  type        = string
+  description = "Department requesting the infrastructure"
+  default     = ""
+}
