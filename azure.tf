@@ -4,7 +4,6 @@ locals {
   subnet_id = data.terraform_remote_state.backend.outputs.az_subnet_1_id
 }
 
-
 resource "azurerm_public_ip" "wspub_ip" {
   count               = var.resource_count
   name                = "wspub_ip-${count.index}"
@@ -74,6 +73,7 @@ resource "azurerm_linux_virtual_machine" "wsvm" {
 
   custom_data = base64encode(file("install.sh"))
 
+  tags = var.department
 
   admin_username = "azureuser"
   admin_ssh_key {
