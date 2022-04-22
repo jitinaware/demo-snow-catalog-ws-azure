@@ -45,3 +45,18 @@ variable "department" {
   description = "Department requesting the infrastructure"
   default     = ""
 }
+
+variable "purpose" {
+  type        = string
+  description = "Purpose of the infrastructure"
+  default     = ""
+}
+
+variable "resource_tags" {
+  description = "Tags to set for all resources"
+  type = map(string)
+  default = {
+    department = ""
+    purpose = ""
+  }
+}

@@ -73,7 +73,13 @@ resource "azurerm_linux_virtual_machine" "wsvm" {
 
   custom_data = base64encode(file("install.sh"))
 
-  tags = var.department
+  tags = merge(
+    var.resource_tags,
+    {
+      department = var.department
+      purpose = var.purpose
+    }
+  )
 
   admin_username = "azureuser"
   admin_ssh_key {
