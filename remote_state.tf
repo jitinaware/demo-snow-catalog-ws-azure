@@ -4,7 +4,7 @@ data "terraform_remote_state" "backend" {
   config = {
     organization = "jaware-hc-demos"
     workspaces = {
-      name = "demo-snow-tf-aws-azure-backend"
+      name = "demo-snow-tf-backend-azcentralus"
     }
   }
 }
