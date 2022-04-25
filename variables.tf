@@ -60,3 +60,7 @@ variable "resource_tags" {
     purpose = ""
   }
 }
+
+variable "azure_rg_name" {
+  type = string
+}

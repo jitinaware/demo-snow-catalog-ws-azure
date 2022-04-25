@@ -1,6 +1,6 @@
 locals {
   location  = data.terraform_remote_state.backend.outputs.az_location
-  rg_name   = data.terraform_remote_state.backend.outputs.az_rg_name
+  rg_name   = var.azure_rg_name
   subnet_id = data.terraform_remote_state.backend.outputs.az_subnet_1_id
 }
 
