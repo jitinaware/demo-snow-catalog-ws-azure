@@ -3,7 +3,7 @@
 
 
 
-variable "ARM_SUBSCRIPTION_ID" {
+variable "azure_subscription_id" {
   type        = string
   description = "Azure Subscription ID"
   default     = ""
@@ -15,20 +15,20 @@ variable "resource_count" {
   default     = "1"
 }
 
-variable "ARM_CLIENT_ID" {
+variable "azure_client_id" {
   type        = string
   description = "Azure Client ID"
   default     = ""
 }
 
-variable "ARM_CLIENT_SECRET" {
+variable "azure_client_secret" {
   type        = string
   description = "Azure Client secret"
   sensitive   = true
   default     = ""
 }
 
-variable "ARM_TENANT_ID" {
+variable "azure_tenant_id" {
   type        = string
   description = "Azure Tenant ID"
   default     = ""
