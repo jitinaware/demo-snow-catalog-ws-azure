@@ -1,7 +1,7 @@
 locals {
-  location  = data.terraform_remote_state.backend.outputs.az_location
-  rg_name   = var.azure_rg_name
-  subnet_id = data.terraform_remote_state.backend.outputs.az_subnet_1_id
+  location  = data.terraform_remote_state.backend.outputs.azure_location
+  rg_name   = data.terraform_remote_state.backend.outputs.azure_rg_name
+  subnet_id = data.terraform_remote_state.backend.outputs.azure_subnet_1_id
 }
 
 resource "azurerm_public_ip" "wspub_ip" {
@@ -84,7 +84,7 @@ resource "azurerm_linux_virtual_machine" "wsvm" {
   admin_username = "azureuser"
   admin_ssh_key {
     username   = "azureuser"
-    public_key = var.az_ssh_pubkey
+    public_key = var.azure_ssh_pubkey
   }
 
   os_disk {

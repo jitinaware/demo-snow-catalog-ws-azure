@@ -34,7 +34,7 @@ variable "azure_tenant_id" {
   default     = ""
 }
 
-variable "az_ssh_pubkey" {
+variable "azure_ssh_pubkey" {
   type        = string
   description = "Public key for SSH access"
   default     = ""
